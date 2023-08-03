@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shickluna Shipyard Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- icon -->
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <!-- GSAP  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <nav class="navbar">
+        <div class="menu-icon">
+          <ion-icon name="menu"></ion-icon>
+        </div>
+        <div class="categories">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/1854wcregister.html">wcregister</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="stripe"></div>
+
+      <div class="ship-div">
+        <img src="ship.png" class="ship" />
+      </div>
+
+      <div class="text">
+        <h1>
+          <span class="header">Shickluna Shipyard</span>
+        </h1>
+        <h2>LAUNCHING SOON!</h2>
+        <p>
+          <span class="para"> </span>
+        </p>
+      </div>
+
+      <div class="media">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/shicklunashipyard/">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/digtheshipyard/">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const menuIcon = document.querySelector(".menu-icon");
+      const categories = document.querySelector(".categories");
+
+      // Function to toggle the mobile menu
+      function toggleMenu() {
+        categories.classList.toggle("show");
+      }
+
+      // Event listener to trigger toggleMenu on menuIcon click
+      menuIcon.addEventListener("click", toggleMenu);
+
+      // Event listener to hide mobile menu when clicking outside the menu
+      window.addEventListener("click", function (e) {
+        if (!categories.contains(e.target) && !menuIcon.contains(e.target)) {
+          categories.classList.remove("show");
+        }
+      });
+
+      function imgSlider(anything) {
+        document.querySelector(".ship").src = anything;
+      }
+
+      TweenMax.from(".navbar", 1, {
+        delay: 1,
+        x: -40,
+        opacity: 0,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.to(".stripe", 2.4, {
+        delay: 0,
+        width: "100%",
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".ship-div", 1, {
+        delay: 1.4,
+        opacity: 0,
+        y: -1000,
+        ease: Circ.easeInOut,
+      });
+
+      TweenMax.from(".header", 2, {
+        delay: 1.8,
+        x: -800,
+        ease: Circ.easeInOut,
+      });
+
+      TweenMax.from(".text h2", 1, {
+        delay: 3.3,
+        opacity: 0,
+        y: 40,
+        ease: Circ.easeInOut,
+      });
+
+      TweenMax.from(".text .para", 1.2, {
+        delay: 3.9,
+        opacity: 0,
+        y: 40,
+        ease: Circ.easeInOut,
+      });
+
+      TweenMax.from(".media ul li", 2, {
+        delay: 3.5,
+        opacity: 0,
+        x: -40,
+        ease: Circ.easeInOut,
+      });
+    </script>
+  </body>
+</html>

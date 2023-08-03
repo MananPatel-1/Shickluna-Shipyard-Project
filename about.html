@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shickluna Shipyard Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- icon -->
+    <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+    <!-- GSAP  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <nav class="navbar">
+        <div class="logo"></div>
+        <div class="categories">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/1854wcregister.html">wcregister</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="info">
+        <h3>The Shickluna Shipyard Project</h3>
+        <p>
+          The Shickluna Shipyard Project is a community-based,
+          multi-disciplinary project investigating a historic Canadian shipyard
+          operated by Louis Shickluna (1838-1880) and Joseph Shickluna
+          (1880-1891).
+        </p>
+        <p>
+          Project headquarters are currently based in the Department of History
+          at Brock University.
+        </p>
+        <p>
+          Our research to date has been primarily supported by the Insight
+          Development Grant program of the Social Sciences and Humanities
+          Research Council of Canada, as well as through generous contributions
+          from collaborating institutions. Additional support and services have
+          been generously provided by the local community.
+        </p>
+        <h3>Contact Information</h3>
+        <p>
+          Email: shipyard@brocku.ca<br />
+          Address:<br />
+          Shickluna Shipyard Project<br />
+          Department of History<br />
+          573 Glenridge Ave.<br />
+          Brock University<br />
+          St. Catharines, ON<br />
+          CANADA L2T 4C2
+        </p>
+      </div>
+
+      <div class="media">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/shicklunashipyard/">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/digtheshipyard/">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      function imgSlider(anything) {
+        document.querySelector(".ship").src = anything;
+      }
+
+      TweenMax.from(".navbar", 1, {
+        delay: 0.1,
+        x: -40,
+        opacity: 0,
+        ease: Expo.easeInOut,
+      });
+    </script>
+  </body>
+</html>

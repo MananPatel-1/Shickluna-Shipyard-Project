@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:ital,wght@0,200;0,600;0,900;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #f4f2ec;
+  font-family: "poppins", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  color: #555555;
+  padding: 0 50px;
+}
+
+.navbar .logo {
+  margin-right: 100px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.navbar .categories {
+  margin-right: auto;
+  position: relative;
+  right: -400px;
+}
+
+.navbar .categories ul li {
+  display: inline-block;
+  padding: 0 30px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navbar .menu-icon {
+  display: none;
+  margin-right: -10px;
+  font-size: 20px;
+}
+
+.stripe {
+  position: absolute;
+  height: 70px;
+  /* width: 100%; */
+  bottom: 43%;
+  background: linear-gradient(to right, #ee4540, #c0342f);
+}
+
+.ship-div {
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  z-index: 1;
+}
+
+.ship-div img {
+  transform: translate(-50%, -50%);
+  max-height: 700px;
+}
+
+.text {
+  position: absolute;
+  top: 290px;
+  left: 500px;
+}
+
+.text h1 {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #555555;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+  width: 900px;
+}
+
+.text h1 .header {
+  position: absolute;
+  bottom: 25px;
+}
+
+.text h2 {
+  position: absolute;
+  font-family: "Josefin Sans", sans-serif;
+  top: 120px;
+  left: 80px;
+  color: #f4f2ec;
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.text p {
+  width: 400px;
+  font-size: 12px;
+  margin-top: 45px;
+  margin-left: 50px;
+  position: relative;
+  height: 110px;
+  color: #555555;
+  font-weight: 600;
+}
+
+.media {
+  position: absolute;
+  bottom: 110px;
+  left: 40px;
+}
+
+.media ul {
+  position: absolute;
+  list-style: none;
+}
+
+.media ul li {
+  color: #555555;
+  padding: 10px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Styling for the mobile menu */
+.categories {
+  display: none;
+}
+
+.categories.show {
+  display: block;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Ensure it is above other elements */
+}
+
+.categories ul {
+  list-style: none;
+  padding: 20px;
+}
+
+.categories ul li {
+  padding: 10px 0;
+}
+
+.categories ul li a {
+  color: #555555;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Add media query to hide menu icon on larger screens */
+@media screen and (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+
+  /* Adjust the .categories position for larger screens */
+  .categories {
+    display: flex;
+    align-items: center;
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .categories ul li {
+    margin-left: 30px;
+  }
+  .info {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+  }
+
+  .info h3 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #555555;
+    margin-bottom: 10px;
+  }
+
+  .info p {
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 15px;
+  }
+
+  /* Media query for mobile */
+  @media screen and (max-width: 480px) {
+    .info {
+      max-width: 90%;
+      margin: 30px auto;
+      padding: 10px;
+    }
+
+    .info h3 {
+      font-size: 24px;
+    }
+
+    .info p {
+      font-size: 14px;
+    }
+  }
+}
